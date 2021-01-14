@@ -16,10 +16,11 @@ This Project work is by the Scrum methodology
 
 ## Project Team:
 ### development team:
-* Alaref Abushaala
+* Siraj Ben Sasi
 * Mohammed Algaramanly
 * Taha Saeed
-* Siraj Ben Sasi
+* Alaref Abushaala
+
 
 ### Scrum Master:
 * Alaref Abushaala
