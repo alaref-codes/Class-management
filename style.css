@@ -9,7 +9,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #e9e9e9;
+  background-color: #009879;
 }
 
 .topnav a {
@@ -73,4 +73,52 @@ body {
   .topnav input[type=text] {
     border: 1px solid #ccc;  
   }
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px auto;
+    font-size: .6em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.20);
+    width: 80%;
+}
+
+
+.content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: right;
+    font-weight: bold;
+    font-family: Tajawal;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  font-weight: bold;
+  color: #009879;
+}
+
+h1 {
+    font-family: Tajawal;
+    margin: auto;
 }
