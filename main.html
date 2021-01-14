@@ -6,21 +6,24 @@
     <meta name="keywords" content="Management,classes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="table.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap" rel="stylesheet">
     <title>Classes Management System</title>
 </head>
 <body>
-    <div class="topnav">
-      <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
+    <div class="container">
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">حول</a></li>
+            <li><a href="#">التواصل</a></li>
+        </ul>
+        <h3><center>نظام إدارة القاعات</center></h3>
+    <a href="#"><img src="class.PNG" alt="The logo image of the website"></a>
     </div>
-    <div style="padding-left:16px">
-      <h1>نظام ادارة القاعات</h1>
-      <p>موقع لتسهيل عمل مشرف القاعات من حيث حجز القاعات ومعرفة كل المعلومات حول كل قاعة</p>
+    
+    
+    <div class="middle">
+      موقع لتسهيل عمل مشرف القاعات من حيث حجز القاعات ومعرفة كل المعلومات المطلوبة حول كل قاعة.
     </div>
     
 
@@ -30,11 +33,11 @@
         <thead>   
             <tr>
                 <th>الطابق</th>
-                <th>عدد الكراسي</th>
-                <th>عدد الا جهزة</th>
-                <th>جهازالعرض مرئي</th>
-                <th>عددالطولات</th>
-                <th>اسم القاعة</th>
+                <th>الكراسي</th>
+                <th>الأجهزة</th>
+                <th>جهاز العرض المرئي</th>
+                <th>عدد الطولات</th>
+                <th>رمز القاعة</th>
             </tr>
         </thead>
         
@@ -43,18 +46,27 @@
                 <td>التاني</td>
                 <td>43</td>
                 <td>21</td>
-                <td>متوفر</td>
+                <td>غير متوفر</td>
                 <td>32</td>
                 <td>214</td>
             </tr>
             
             <tr class="active-row">
-                <td>التاني</td>
+                <td>الأول</td>
                 <td>43</td>
                 <td>21</td>
                 <td>متوفر</td>
                 <td>32</td>
-                <td>214</td>
+                <td>166</td>
+            </tr>
+            
+            <tr>
+                <td>الأول</td>
+                <td>43</td>
+                <td>21</td>
+                <td>غير متوفر</td>
+                <td>32</td>
+                <td>312</td>
             </tr>
             
             <tr>
@@ -67,21 +79,12 @@
             </tr>
             
             <tr>
-                <td>التاني</td>
+                <td>الأول</td>
                 <td>43</td>
                 <td>21</td>
-                <td>متوفر</td>
+                <td>غير متوفر</td>
                 <td>32</td>
-                <td>214</td>
-            </tr>
-            
-            <tr>
-                <td>التاني</td>
-                <td>43</td>
-                <td>21</td>
-                <td>متوفر</td>
-                <td>32</td>
-                <td>214</td>
+                <td>315</td>
             </tr>
             <tr>
                 <td>التاني</td>
@@ -89,7 +92,7 @@
                 <td>21</td>
                 <td>متوفر</td>
                 <td>32</td>
-                <td>214</td>
+                <td>153</td>
             </tr>
         </tbody>
     </table>
