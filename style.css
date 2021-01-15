@@ -6,82 +6,112 @@
 body {
     direction: rtl;
     font-family: Tajawal;
+    height: 750px;
+    position: relative;
 }
 
 h1 {
-    font-family: Tajawal;
     margin: 40px 20%;
-
 }
-
 
 .container {
     background-color: #009879;
     position: relative;
     box-shadow: 0px .1px 9px .1px #009879;
     display: flex;
-    /*    border-bottom:black solid 2px;*/
+    align-items: center;
+    font-size: 1.2em;
     justify-content: space-between;
+    flex-flow: row-reverse wrap;
 }
 
-
-ul {
+.container ul {
     list-style: none;
-    /*    position: absolute;*/
-    margin-top: 5px;
+    order: 2;
 }
 
-footer {
-     background-color: #009879;
-    
-    box-shadow: 0px .1px 9px .1px #009879;
-     display:flex;
-    margin:90px 20%;
-    
-   
-    
-    
-    
-}
-li {
-    
+.container ul li {
     display: inline;
-    margin-left: 14px;
+    margin-left: 12px;
 }
 
-
-a {
+.container ul li a {
     color: white;
     text-decoration: none;
-    font-family: Tajawal;
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
     border-radius: 20%;
     padding: 2px;
 }
 
-a:hover {
-    color: black;
-    background-color: aqua;
+.container ul li a:hover {
+    color: #025e4c;
 }
 
-img {
-    height: 39px;
-    float: left;
-    margin-left: 25px;
-    margin-top: 0px;
-    display: inline;
-
+.container img {
+    height: 49px;
+    margin-left: 65px;
 }
 
 .container h3 {
     color: white;
-    font-family: Tajawal;
-    display: inline;
-    margin-top: 5px;
+    order: 1;
+}
+
+@media (max-width:1024px) { 
+    .container {
+        justify-content: space-around;
+    }
+    .container img {
+        margin-left: 1em;
+    }
+    
+    .container h3 , .container img {
+        margin-top: 10px;
+    }
+    
+    .container ul {
+        margin: auto 20%;
+        margin-top: 15px;
+        width: 100%;
+    }
+    
+    .container ul li {
+        display: block;
+        margin: 14px auto;
+        text-align: center;
+        height: 40px
+        }
 }
 
 
 .middle {
     margin: 30px 80px 30px 50px;
     font-size: .9em;
+}
+
+footer {
+    background-color: #009879;
+    box-shadow: 0px .1px 9px .1px #009879;
+    width: 100%;
+    display:flex;
+    height: 50px;
+    margin:40px 0px auto;
+    position:absolute;
+    bottom: 0%;
+    font-size: .7em;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:1024px) {
+    footer {
+        position: relative;
+    }
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
