@@ -31,11 +31,24 @@ ul {
     margin-top: 5px;
 }
 
-
+footer {
+     background-color: #009879;
+    
+    box-shadow: 0px .1px 9px .1px #009879;
+     display:flex;
+    margin:90px 20%;
+    
+   
+    
+    
+    
+}
 li {
+    
     display: inline;
     margin-left: 14px;
 }
+
 
 a {
     color: white;
