@@ -10,8 +10,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Classes Management System</title>
+    
+        <script>
+            
+            function addRow()
+            {
+                
+             var  code = document.getElementById('code').value; 
+                 var tables = document.getElementById('tables').value; 
+                    var projectar = document.getElementById('projectar').value; 
+                       var devices = document.getElementById('devices').value;
+                          var chers = document.getElementById('chers').value;
+                             var floor = document.getElementById('floor').value;
+                  
+                  
+                  var table = document.getElementsByTagName('table')[1];
+                  
+                
+                  var newRow = table.insertRow(1);
+                  
+                 
+                  var cel1 = newRow.insertCell(0);
+                  var cel2 = newRow.insertCell(1);
+                  var cel3 = newRow.insertCell(2);
+                  var cel4 = newRow.insertCell(3);
+                  var cel5 = newRow.insertCell(4);
+                  var cel6 = newRow.insertCell(5);
+                  
+                 
+                  cel1.innerHTML = floor;
+                  cel2.innerHTML = chers;
+                  cel3.innerHTML = devices;
+                  cel4.innerHTML = projectar;
+                  cel5.innerHTML = tables;
+                  cel6.innerHTML = code;
+            }
+            
+        </script>
 </head>
 <body>
+    
+
     <div class="container">
         <h3><center>نظام إدارة القاعات</center></h3>
         <a href="#"><img src="assets/class.PNG" alt="The logo image of the website"></a>
@@ -29,7 +68,13 @@
       موقع لتسهيل عمل مشرف القاعات من حيث حجز القاعات ومعرفة كل المعلومات المطلوبة حول كل قاعة.
     </div>
     
-
+  رمز القاعة: <input type="number" name="code" id="code" /><br/><br/>
+         عدد الطولات: <input type="number" name=" tables" id="tables" /><br/><br/>
+                جهاز العرض المرئي: <input type="text" name="projectar" id="projectar" /><br/><br/>
+                      الأجهزة: <input type="number" name="devices" id="devices" /><br/><br/>
+                            الكراسي: <input type="number" name="chers" id="chers" /><br/><br/>
+                                  الطابق: <input type="text" name="floor" id="floor" /><br/><br/>
+        <button onclick="addRow();">إضافة</button><br/><br/>
      <h1><center> جدول القاعات </center></h1>
      
      <div class="boxContainer">
