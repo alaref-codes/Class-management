@@ -1,6 +1,6 @@
 .content-table {
     border-collapse: collapse;
-    margin: 25px auto;
+    margin: 25px auto 100px ;
     font-size: .6em;
     min-width: 200px;
     max-width: 700px;

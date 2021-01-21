@@ -1,102 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="author" content="Alaref-Siraj-Taha-Mohammed">
     <meta name="description" content="Class Project for Classes management system">
     <meta name="keywords" content="Management,classes">
-    <link rel="icon" href="assets/class.png" >
+    <link rel="icon" href="assets/class.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="stylesheet" href="table.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Classes Management System</title>
-    
-        <script>
-            
-            function addRow()
-            {
-                
-             var  code = document.getElementById('code').value; 
-                 var tables = document.getElementById('tables').value; 
-                    var projectar = document.getElementById('projectar').value; 
-                       var devices = document.getElementById('devices').value;
-                          var chers = document.getElementById('chers').value;
-                             var floor = document.getElementById('floor').value;
-                  
-                  
-                  var table = document.getElementsByTagName('table')[1];
-                  
-                
-                  var newRow = table.insertRow(1);
-                  
-                 
-                  var cel1 = newRow.insertCell(0);
-                  var cel2 = newRow.insertCell(1);
-                  var cel3 = newRow.insertCell(2);
-                  var cel4 = newRow.insertCell(3);
-                  var cel5 = newRow.insertCell(4);
-                  var cel6 = newRow.insertCell(5);
-                  
-                 
-                  cel1.innerHTML = floor;
-                  cel2.innerHTML = chers;
-                  cel3.innerHTML = devices;
-                  cel4.innerHTML = projectar;
-                  cel5.innerHTML = tables;
-                  cel6.innerHTML = code;
-            }
-            
-        </script>
+
+    <script>
+        function addRow() {
+
+            var code = document.getElementById('code').value;
+            var tables = document.getElementById('tables').value;
+            var projector = document.getElementById('projector').value;
+            var devices = document.getElementById('devices').value;
+            var chairs = document.getElementById('chairs').value;
+            var floor = document.getElementById('floor').value;
+
+            var table = document.getElementsByTagName('table')[1];
+
+            var newRow = table.insertRow(1);
+
+            var cel1 = newRow.insertCell(0);
+            var cel2 = newRow.insertCell(1);
+            var cel3 = newRow.insertCell(2);
+            var cel4 = newRow.insertCell(3);
+            var cel5 = newRow.insertCell(4);
+            var cel6 = newRow.insertCell(5);
+
+            cel1.innerHTML = floor;
+            cel2.innerHTML = chairs;
+            cel3.innerHTML = devices;
+            cel4.innerHTML = projector;
+            cel5.innerHTML = tables;
+            cel6.innerHTML = code;
+        }
+
+    </script>
 </head>
+
 <body>
-    
+
 
     <div class="container">
-        <h3><center>نظام إدارة القاعات</center></h3>
+        <h3>
+            <center>نظام إدارة القاعات</center>
+        </h3>
         <a href="#"><img src="assets/class.PNG" alt="The logo image of the website"></a>
-        
+
         <ul>
             <li><a href="#">الرئيسية</a></li>
             <li><a href="#">حول</a></li>
             <li><a href="#">التواصل</a></li>
         </ul>
-        
+
     </div>
 
-        
+
     <div class="middle">
-      موقع لتسهيل عمل مشرف القاعات من حيث حجز القاعات ومعرفة كل المعلومات المطلوبة حول كل قاعة.
+        موقع لتسهيل عمل مشرف القاعات من حيث حجز القاعات ومعرفة كل المعلومات المطلوبة حول كل قاعة.
     </div>
+
     
-  رمز القاعة: <input type="number" name="code" id="code" /><br/><br/>
-         عدد الطولات: <input type="number" name=" tables" id="tables" /><br/><br/>
-                جهاز العرض المرئي: <input type="text" name="projectar" id="projectar" /><br/><br/>
-                      الأجهزة: <input type="number" name="devices" id="devices" /><br/><br/>
-                            الكراسي: <input type="number" name="chers" id="chers" /><br/><br/>
-                                  الطابق: <input type="text" name="floor" id="floor" /><br/><br/>
-        <button onclick="addRow();">إضافة</button><br/><br/>
-     <h1><center> جدول القاعات </center></h1>
-     
-     <div class="boxContainer">
-         <table class="elementsContainer">
-             <tr>
-                 <td>
-                     <input type="text" placeholder="بحث" class="search">
-                 </td>
-                 <td>
-                     <a href="#"><span class="material-icons">search
-</span></a>
-                 </td>
-             </tr>
-         </table>
-         
-     </div>
-     
-     
+    <label for="code">رمز القاعة :</label>
+    <input type="number" name="code" id="code" /><br /><br />
+    
+    <label for="code">عدد الطاولات : </label>
+    <input type="number" name=" tables" id="tables" /><br /><br />
+    
+    <label for="code">جهاز العرض المرئي : </label>
+    <input type="text" name="projector" id="projector" /><br /><br />
+    
+    <label for="code">الأجهزة : </label>
+    <input type="number" name="devices" id="devices" /><br /><br />
+    
+    <label for="code">الكراسي : </label>
+    <input type="number" name="chairs" id="chairs" /><br /><br />
+    
+    <label for="code">الطابق : </label>
+    <input type="text" name="floor" id="floor" /><br /><br />
+    
+    
+    <button onclick="addRow();">إضافة</button><br /><br />
+    <h1>
+        <center> جدول القاعات </center>
+    </h1>
+
+    <div class="boxContainer">
+        <table class="elementsContainer">
+            <tr>
+                <td>
+                    <input type="text" placeholder="بحث" class="search">
+                </td>
+                <td>
+                    <a href="#"><span class="material-icons">search
+                        </span></a>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+
     <div style="overflow-x: auto;">
-        <table class="content-table" >
-            <thead>   
+        <table class="content-table">
+            <thead>
                 <tr>
                     <th>الطابق</th>
                     <th>الكراسي</th>
@@ -125,59 +139,25 @@
                     <td>32</td>
                     <td>166</td>
                 </tr>
-
-                <tr>
-                    <td>الأول</td>
-                    <td>43</td>
-                    <td>21</td>
-                    <td>غير متوفر</td>
-                    <td>32</td>
-                    <td>312</td>
-                </tr>
-
-                <tr>
-                    <td>التاني</td>
-                    <td>43</td>
-                    <td>21</td>
-                    <td>متوفر</td>
-                    <td>32</td>
-                    <td>214</td>
-                </tr>
-
-                <tr>
-                    <td>الأول</td>
-                    <td>43</td>
-                    <td>21</td>
-                    <td>غير متوفر</td>
-                    <td>32</td>
-                    <td>315</td>
-                </tr>
-                <tr>
-                    <td>التاني</td>
-                    <td>43</td>
-                    <td>21</td>
-                    <td>متوفر</td>
-                    <td>32</td>
-                    <td>153</td>
-                </tr>
             </tbody>
         </table>
     </div>
-    
-    
+
+
     <footer>
         <p>لمزيد من المعلومات قم بزيارتنا على : </p>
 
         <p>فيسبوك</p>
 
-        <a href="https://www.facebook.com/%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%82%D8%A7%D8%B9%D8%A7%D8%AA-103808915024834/"><img src="assets/download%20(1).png"/ height="50" width="50" alt="تويتر"></a>
+        <a href="https://www.facebook.com/%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%82%D8%A7%D8%B9%D8%A7%D8%AA-103808915024834/"><img src="assets/download%20(1).png" / height="50" width="50" alt="تويتر"></a>
         <p>تويتر</p>
 
-        <a href="https://twitter.com/m5tyniYAIdty5zw"><img src="assets/download.png"/height="50" width="50" alt="فيسبوك"></a>
+        <a href="https://twitter.com/m5tyniYAIdty5zw"><img src="assets/download.png" /height="50" width="50" alt="فيسبوك"></a>
         <p>انستجرام</p>
 
-        <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Falgaat2021%3Figshid%3D1ia9ys4btcgx7%26fbclid%3DIwAR35PnsDPOoRt4Ca5koiWr4oxU0WBOe_-As8Rnawe4yWWm3vCwRLLH8rQY4&h=AT2-P9Vxt_4k1BvYjTSc0e7onBE9Y9TQKqn1LHiQIDRQPfjfMBYothHVgthhPKxEOLdXChHpF_AIhZsw8s4xU7ZAVPG2FO7k-HbPvXAneDGyQ6hKpUhrh9IojBKYB0JyELMj1Q"><img src="assets/insta.jpg"/ height="50" width="50" alt="انستا"></a>
+        <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Falgaat2021%3Figshid%3D1ia9ys4btcgx7%26fbclid%3DIwAR35PnsDPOoRt4Ca5koiWr4oxU0WBOe_-As8Rnawe4yWWm3vCwRLLH8rQY4&h=AT2-P9Vxt_4k1BvYjTSc0e7onBE9Y9TQKqn1LHiQIDRQPfjfMBYothHVgthhPKxEOLdXChHpF_AIhZsw8s4xU7ZAVPG2FO7k-HbPvXAneDGyQ6hKpUhrh9IojBKYB0JyELMj1Q"><img src="assets/insta.jpg" / height="50" width="50" alt="انستا"></a>
 
-      </footer>
+    </footer>
 </body>
+
 </html>

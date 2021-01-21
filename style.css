@@ -6,12 +6,11 @@
 body {
     direction: rtl;
     font-family: Tajawal;
-    height: 750px;
     position: relative;
 }
 
 h1 {
-    margin: 40px 20%;
+    margin: 5px auto 10px;
 }
 
 .container {
@@ -96,8 +95,8 @@ footer {
     display:flex;
     height: 50px;
     margin:40px 0px auto;
-    position:absolute;
-    bottom: 0%;
+    position: absolute;
+    bottom: 0px;
     font-size: .7em;
     align-items: center;
     justify-content: center;
@@ -117,8 +116,6 @@ footer img {
     border-radius: 70% ;
 
 }
-
-
 
 .boxContainer {
     margin: auto;
@@ -158,7 +155,9 @@ footer img {
     
 }
 
-
+input {
+    display: inline;
+}
 
 
 
