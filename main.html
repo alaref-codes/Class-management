@@ -17,7 +17,6 @@
 
 <body>
 
-
     <div class="container">
         <h3>
             <center>نظام إدارة القاعات</center>
@@ -37,34 +36,34 @@
         موقع لتسهيل عمل مشرف القاعات من حيث حجز القاعات ومعرفة كل المعلومات المطلوبة حول كل قاعة.
     </div>
 
-    
-    <label for="code" class= "add-buttens">رمز القاعة :</label>
-    <input type="number" name="code" id="code" class= "add-buttens"/><br /><br />
-    
-    <label for="code" class= "add-buttens">عدد الطاولات : </label>
-    <input type="number" name=" tables" id="tables" class= "add-buttens"/><br /><br />
-    
-    <label for="code" class= "add-buttens">جهاز العرض المرئي : </label>
-    <input type="text" name="projector" id="projector" class= "add-buttens"/><br /><br />
-    
-    <label for="code" class= "add-buttens">الأجهزة : </label>
-    <input type="number" name="devices" id="devices" class= "add-buttens"/><br /><br />
-    
-    <label for="code" class= "add-buttens">الكراسي : </label>
-    <input type="number" name="chairs" id="chairs" class= "add-buttens"/><br /><br />
-    
-    <label for="code" class= "add-buttens">الطابق : </label>
-    <input id="floor" name="floor" class= "add-buttens"/>
+    <button onclick="show()" class="add-buttens" id="show">إضافة قاعة
+    </button>
 
-<!--
-          <option value="الأول">الأول</option>
-          <option value="الثاني">الثاني</option>
-          <option value="الثالث">الثالث</option><br /><br />
--->
-<br /><br />
-    
-    
-    <button onclick="addRow();" class= "add-buttens">إضافة</button><br /><br />
+    <br /><br />
+    <div id="forms">
+        <label for="code" class="add-buttens">رمز القاعة :</label>
+        <input type="number" name="code" id="code" class="add-buttens" /><br /><br />
+
+        <label for="code" class="add-buttens">عدد الطاولات : </label>
+        <input type="number" name=" tables" id="tables" class="add-buttens" /><br /><br />
+
+        <label for="code" class="add-buttens">جهاز العرض المرئي : </label>
+        <input type="text" name="projector" id="projector" class="add-buttens" /><br /><br />
+
+        <label for="code" class="add-buttens">الأجهزة : </label>
+        <input type="number" name="devices" id="devices" class="add-buttens" /><br /><br />
+
+        <label for="code" class="add-buttens">الكراسي : </label>
+        <input type="number" name="chairs" id="chairs" class="add-buttens" /><br /><br />
+
+        <label for="code" class="add-buttens">الطابق : </label>
+        <input id="floor" name="floor" class="add-buttens" />
+        <br /><br />
+
+        <button onclick="addRow();" class="add-buttens">إضافة</button>
+
+    </div>
+
     <h1>
         <center> جدول القاعات </center>
     </h1>
