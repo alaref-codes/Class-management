@@ -157,7 +157,17 @@ footer img {
 
 input {
     display: inline;
+    
 }
+.add-buttens {
+    border-radius: 50px;
+    color: #009879;
+    margin: 1px 80px 1px -80px;
+    
+    
+    
+}
+
 
 
 
