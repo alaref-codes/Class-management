@@ -138,6 +138,10 @@ footer img {
     transition: all .5s ease-in-out;
 }
 
+.inl {
+    display: inline;
+}
+
 .search {
     border: none;
     height: 100%;
@@ -167,20 +171,5 @@ input {
 .add-buttens {
     border-radius: 50px;
     color: #009879;
-    margin: 1px 80px 1px -80px;
-    
-    
-    
+    margin: 1px 80px 1px -80px; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
