@@ -45,6 +45,7 @@
    
     <br /><br />
        <!-- <form onsubmit="event.preventDefault()"  autocomplete="off" > -->
+        <div class="contain">
            <div>
                 <label for="code" class="add-buttens">رمز القاعة :</label>
                 <input type="number" name="code" id="code" class="add-buttens" /><br /><br />
@@ -70,8 +71,9 @@
                 <input id="floor" name="floor" class="add-buttens" />
             </div>
             <div>
-                <button onclick="onSubmit()"  id="btn" >إضافة</button>
+                <button id="btn" >إضافة</button>
             </div>
+        </div>
         <br/><br/>
 
 <!--        <button class="add-buttens" id="btn" >إضافة</button>-->
@@ -117,45 +119,7 @@
 
 <script>
     
-var list = [
-    {
-        'code': 234,
-        'tables': 32,
-        'projector': "متوفر",
-        'devices': 43,
-        'charis': 31,
-        'floor': "الأول"
-    },
-    {
-        'code': 234,
-        'tables': 32,
-        'projector': "غير متوفر",
-        'devices': 43,
-        'charis': 31,
-        'floor': "الثاني"
-    }
-];
 
-
-buildTable(list)
-
-function buildTable(data){
-var table = document.getElementById('table')
-
-for (var i = 0; i < data.length; i++){
-    var row = `<tr>
-                    <td>${data[i].code}</td>
-                    <td>${data[i].tables}</td>
-                    <td>${data[i].projector}</td>
-                    <td>${data[i].devices}</td>
-                    <td>${data[i].chairs}</td>
-                    <td>${data[i].floor}</td>
-                </tr>`
-    table.innerHTML += row
-
-
-}
-}
 
 </script>
 

@@ -1,10 +1,62 @@
-onSubmit()
+window.onload = function() {
+    document.getElementById("btn").addEventListener("click", onSubmit)
+    var list = [
+        {
+            'code': 234,
+            'tables': 32,
+            'projector': "متوفر",
+            'devices': 43,
+            'charis': 31,
+            'floor': "الأول"
+        },
+        {
+            'code': 234,
+            'tables': 32,
+            'projector': "غير متوفر",
+            'devices': 43,
+            'charis': 31,
+            'floor': "الثاني"
+        }
+    ];
+    
+    
+    buildTable(list)
+    
+}
+function buildTable(data){
+    var table = document.getElementById('table')
+    
+    for (var i = 0; i < data.length; i++){
+        var row = `<tr>
+                        <td>${data[i].code}</td>
+                        <td>${data[i].tables}</td>
+                        <td>${data[i].projector}</td>
+                        <td>${data[i].devices}</td>
+                        <td>${data[i].chairs}</td>
+                        <td>${data[i].floor}</td>
+                    </tr>`
+        table.innerHTML += row
+    
+    
+    }
+    }
 
 function onSubmit() { 
     var formData = model();
     view(formData);
     resetForm()
 }
+
+
+
+document.addEventListener('click', (e) => {
+    console.log(e.target);
+    if(e.target.classList.contains('delete')) {
+        onDelete(e)
+    } else {
+        console.log('not')
+    }
+})
 
 function model() { 
     var formData = {};
@@ -16,7 +68,6 @@ function model() {
     formData["floor"] = document.getElementById("floor").value.trim();
     return formData;
 }
-
 
 function view(data) {
     if (data["code"] !== "" && data["desks"] !== "" && data["projector"] !== "" && data["devices"] !== "" && data["chairs"] !== "" && data["floor"] !== "" ) {
@@ -34,12 +85,13 @@ function view(data) {
         cell5.innerHTML = data.chairs;
         cell6 = newRow.insertCell(5);
         cell6.innerHTML = data.floor;
-        // cell7 = newRow.insertCell(6);
-        // cell7.innerHTML = '<a onClick="onDelete(this)">مسح</a>';
+        cell7 = newRow.insertCell(6);
+        cell7.innerHTML = '<a class="delete">مسح</a>';
     }else{
         alert("All the fields are required");
     }   
 }
+
 function resetForm() {
     document.getElementById("code").value = "";
     document.getElementById("desks").value = "";
@@ -50,7 +102,7 @@ function resetForm() {
 }
 
 function onDelete(td){
-    row = td.parentElement.parentElement;
-    document.getElementById("table").deletRow(row.rowIndex);
+    row = td.target.parentElement.parentElement;
+    document.getElementById("table").deleteRow(row.rowIndex);
     resetForm();    
 }

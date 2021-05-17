@@ -13,6 +13,16 @@ h1 {
     margin: 5px auto 10px;
 }
 
+.contain {
+    display: grid;
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+    grid-template-columns: 2fr;
+}
+
 .container {
     background-color: #009879;
     position: relative;
