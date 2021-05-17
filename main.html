@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta name="author" content="Alaref-Siraj-Taha-Mohammed">
     <meta name="description" content="Class Project for Classes management system">
     <meta name="keywords" content="Management,classes">
@@ -12,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Classes Management System</title>
-    <script type="text/javascript" src="back.js"></script>
+    <script type="text/javascript" src="back_.js"></script>
 </head>
 
 <body>
@@ -36,37 +37,45 @@
         موقع لتسهيل عمل مشرف القاعات من حيث حجز القاعات ومعرفة كل المعلومات المطلوبة حول كل قاعة.
     </div>
 
+<!--
     <button onclick="show()" class="add-buttens" id="show">إضافة قاعة
     </button>
+-->
 
    
     <br /><br />
-    <div id="forms">
-        <div class="inl">
-            <label for="code" class="add-buttens">رمز القاعة :</label>
-            <input type="number" name="code" id="code" class="add-buttens" /><br /><br />
-        </div>
-        
-        <div class="inl">
-            <label for="code" class="add-buttens">عدد الطاولات : </label>
-            <input type="number" name=" tables" id="tables" class="add-buttens" /><br /><br />
-        </div>
-        <label for="code" class="add-buttens">جهاز العرض المرئي : </label>
-        <input type="text" name="projector" id="projector" class="add-buttens" /><br /><br />
+       <!-- <form onsubmit="event.preventDefault()"  autocomplete="off" > -->
+           <div>
+                <label for="code" class="add-buttens">رمز القاعة :</label>
+                <input type="number" name="code" id="code" class="add-buttens" /><br /><br />
+           </div>
+           <div>
+                <label for="code" class="add-buttens">عدد الطاولات : </label>
+                <input type="number" name="desks" id="desks" class="add-buttens" /><br /><br />
+            </div>
+            <div>
+                <label for="code" class="add-buttens">جهاز العرض المرئي : </label>
+                <input type="text" name="projector" id="projector" class="add-buttens" /><br /><br />
+            </div>
+            <div>
+                <label for="code" class="add-buttens">الأجهزة : </label>
+                <input type="number" name="devices" id="devices" class="add-buttens" /><br /><br />
+            </div>
+            <div>
+                <label for="code" class="add-buttens">الكراسي : </label>
+                <input type="number" name="chairs" id="chairs" class="add-buttens" /><br /><br />
+            </div>
+            <div>
+                <label for="code" class="add-buttens">الطابق : </label>
+                <input id="floor" name="floor" class="add-buttens" />
+            </div>
+            <div>
+                <button onclick="onSubmit()"  id="btn" >إضافة</button>
+            </div>
+        <br/><br/>
 
-        <label for="code" class="add-buttens">الأجهزة : </label>
-        <input type="number" name="devices" id="devices" class="add-buttens" /><br /><br />
-
-        <label for="code" class="add-buttens">الكراسي : </label>
-        <input type="number" name="chairs" id="chairs" class="add-buttens" /><br /><br />
-
-        <label for="code" class="add-buttens">الطابق : </label>
-        <input id="floor" name="floor" class="add-buttens" />
-        <br /><br />
-
-        <button onclick="addRow();" class="add-buttens">إضافة</button>
-
-    </div>
+<!--        <button class="add-buttens" id="btn" >إضافة</button>-->
+<!-- onclick="addRow();" -->
 
     <h1>
         <center> جدول القاعات </center>
@@ -89,7 +98,7 @@
 
 
     <div style="overflow-x: auto;">
-        <table class="content-table">
+        <table class="content-table" id="table">
             <thead>
                 <tr>
                     <th>الطابق</th>
@@ -102,26 +111,53 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>التاني</td>
-                    <td>43</td>
-                    <td>21</td>
-                    <td>غير متوفر</td>
-                    <td>32</td>
-                    <td>214</td>
-                </tr>
-
-                <tr class="active-row">
-                    <td>الأول</td>
-                    <td>43</td>
-                    <td>21</td>
-                    <td>متوفر</td>
-                    <td>32</td>
-                    <td>166</td>
-                </tr>
             </tbody>
         </table>
     </div>
+
+<script>
+    
+var list = [
+    {
+        'code': 234,
+        'tables': 32,
+        'projector': "متوفر",
+        'devices': 43,
+        'charis': 31,
+        'floor': "الأول"
+    },
+    {
+        'code': 234,
+        'tables': 32,
+        'projector': "غير متوفر",
+        'devices': 43,
+        'charis': 31,
+        'floor': "الثاني"
+    }
+];
+
+
+buildTable(list)
+
+function buildTable(data){
+var table = document.getElementById('table')
+
+for (var i = 0; i < data.length; i++){
+    var row = `<tr>
+                    <td>${data[i].code}</td>
+                    <td>${data[i].tables}</td>
+                    <td>${data[i].projector}</td>
+                    <td>${data[i].devices}</td>
+                    <td>${data[i].chairs}</td>
+                    <td>${data[i].floor}</td>
+                </tr>`
+    table.innerHTML += row
+
+
+}
+}
+
+</script>
 
 
     <footer>
@@ -132,7 +168,7 @@
         <a href="https://www.facebook.com/%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D9%82%D8%A7%D8%B9%D8%A7%D8%AA-103808915024834/"><img src="assets/download%20(1).png" / height="50" width="50" alt="تويتر"></a>
         <p>تويتر</p>
 
-        <a href="https://twitter.com/m5tyniYAIdty5zw"><img src="assets/download.png" /height="50" width="50" alt="فيسبوك"></a>
+        <a href="https://twitter.com/m5tyniYAIdty5zw"><img src="assets/download.png" height="50" width="50" alt="فيسبوك"></a>
         <p>انستجرام</p>
 
         <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Falgaat2021%3Figshid%3D1ia9ys4btcgx7%26fbclid%3DIwAR35PnsDPOoRt4Ca5koiWr4oxU0WBOe_-As8Rnawe4yWWm3vCwRLLH8rQY4&h=AT2-P9Vxt_4k1BvYjTSc0e7onBE9Y9TQKqn1LHiQIDRQPfjfMBYothHVgthhPKxEOLdXChHpF_AIhZsw8s4xU7ZAVPG2FO7k-HbPvXAneDGyQ6hKpUhrh9IojBKYB0JyELMj1Q"><img src="assets/insta.jpg" / height="50" width="50" alt="انستا"></a>
