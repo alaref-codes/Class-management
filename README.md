@@ -6,6 +6,9 @@ Classes management system, A website for a school project.
 * CSS3
 * Javescript
 
+## prerequisite
+It is necessary to run the live server extension in vs code in order to use this program
+
 ## Tools
 * Brackets 
 * git & github
