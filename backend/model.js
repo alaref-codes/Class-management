@@ -1,15 +1,5 @@
 export default function Model() { 
-    var list = JSON.parse(localStorage.getItem('class'));
-    // var list = [
-    //     {
-    //     code :"first",
-    //     desks:"23",
-    //     projector:"available",
-    //     devices:"23",
-    //     chairs:"43",
-    //     floor:"dsdf"
-    //     } 
-    // ];  
+    var list = JSON.parse(localStorage.getItem('class')); 
     
     return {
         addtolist: function (formData) {

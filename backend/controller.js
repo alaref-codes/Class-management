@@ -30,6 +30,10 @@ export default function Controller(model,view) {
 
     return {
         init: function () {
+            var data = model.getItems();
+            for (var i = 0; i < data.length; i++){
+                view.addtoList(data[i])
+            }
             setupEventListeners();
         }
 }
