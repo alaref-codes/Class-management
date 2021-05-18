@@ -1,25 +1,10 @@
-// window.onload = function() {
-//     import Model  from '/model.js'
-//     import View  from '/view.js'
-//     import Controller  from '/controller.js'
-
-//     model = new Model();
-//     view = new View();
-//     data = model.getItems();
-//     for (var i = 0; i < data.length; i++){
-//         view.addtoList(data[i])
-//     }
-
-//     controller = new Controller(model, view);
-//     controller.init(); 
-// }
-
 import Model  from '/model.js'
 import View  from '/view.js'
 import Controller  from '/controller.js'
 
 var model = new Model();
 var view = new View();
+
 var data = model.getItems();
 for (var i = 0; i < data.length; i++){
     view.addtoList(data[i])

@@ -24,7 +24,7 @@ export default function Controller(model,view) {
     }
 
     var onDelete = function (e) {
-        model.deteleItem();
+        model.deteleItem(e);
         view.onDelete(e);
     }
 
