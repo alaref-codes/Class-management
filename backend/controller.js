@@ -2,14 +2,17 @@ export default function Controller(model,view) {
     function setupEventListeners () {
         var DOM = view.getDOMstrings();
         document.getElementById(DOM.btn).addEventListener('click', AddItem);
+        document.addEventListener('keypress', function (event) {
+            if (event.keyCode === 13 || event.which === 13) {
+                AddItem();
+            }
+        });
         document.addEventListener('click', (e) => {
             if(e.target.classList.contains('delete')) {
                 onDelete(e)
             } 
         })
     }
-
-
     
     var AddItem = function () {
         var input = view.getInput();

@@ -29,7 +29,6 @@ export default function View() {
             cell6.innerHTML = data.floor;
             var cell7 = newRow.insertCell(6);
             cell7.innerHTML = '<a class="delete">مسح</a>';
-       
         },
         getDOMstrings: function () {
             return DOMstrings;
@@ -44,7 +43,7 @@ export default function View() {
             return formData;
         },
         resetForm: function() {
-            document.getElementById("code").value = "";
+            document.getElementById("code").value = "";  // Use DOMstrings over here
             document.getElementById("desks").value = "";
             document.getElementById("projector").value = "";
             document.getElementById("devices").value = "";

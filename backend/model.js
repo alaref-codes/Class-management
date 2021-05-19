@@ -16,7 +16,7 @@ export default function Model() {
             return list[list.length - 1];
         },
         getItems: function() {
-            // for (var item = 0; item < list.length; item++){
+            // for (var item = 0; item < list.length; item++){ Delete this
             //     localStorage.setItem('class' , JSON.stringify(list[item]))
             // }
             localStorage.setItem('class' , JSON.stringify(list))
