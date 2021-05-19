@@ -29,6 +29,8 @@ export default function View() {
             cell6.innerHTML = data.floor;
             var cell7 = newRow.insertCell(6);
             cell7.innerHTML = '<a class="delete">مسح</a>';
+            // this should be fixed
+            // using so much variables
         },
         getDOMstrings: function () {
             return DOMstrings;
