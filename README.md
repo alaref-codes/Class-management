@@ -1,5 +1,5 @@
 # Class Management System
-Classes management system, A website for a school project.
+Classes management system, A website for a college project.
 
 ## Technologies
 * HTML5
@@ -13,13 +13,16 @@ It is necessary to run the live server extension in vs code in order to use this
 * Brackets 
 * git & github
 * Team Viewer
+* Visual studio code 
 
 ## Features
-* Beautiful Responsive UI to make the class management easier
-* The site contains the Class Tables
-* You can also add, edit, delete Clsses ( Future Releases )
+* Beautiful Responsive UI.
+* The site contains the Class Tables.
+* You can add, delete Classes.
+* mvc archeticture.
+* localStorage feature.
 
-## Methodology
+## Project Methodology
 * Scrum methodology
 
 ## Project Team:
