@@ -1,5 +1,15 @@
 export default function Model() { 
-    var list = JSON.parse(localStorage.getItem('class')); 
+    var list = [];
+    list = list.push(JSON.parse(localStorage.getItem('class'))); 
+    // var inital = {
+    //     code: "321",
+    //     desks: "21",
+    //     projector: "available",
+    //     devices: "21",
+    //     chairs: "21",
+    //     floor: "first",
+    // }
+    // list.push(inital)
     
     return {
         addtolist: function (formData) {
@@ -20,6 +30,7 @@ export default function Model() {
             //     localStorage.setItem('class' , JSON.stringify(list[item]))
             // }
             localStorage.setItem('class' , JSON.stringify(list))
+            // list = JSON.parse(localStorage.getItem('class')); 
             return list;
         },
     }

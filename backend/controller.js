@@ -9,7 +9,7 @@ export default function Controller(model,view) {
         });
         document.addEventListener('click', (e) => {
             if(e.target.classList.contains('delete')) {
-                onDelete(e)
+                erase(e)
             } 
         })
     }
@@ -26,9 +26,9 @@ export default function Controller(model,view) {
         }
     }
 
-    var onDelete = function (e) {
+    var erase = function (e) {
         model.deteleItem(e);
-        view.onDelete(e);
+        view.erase(e);
     }
 
     return {
