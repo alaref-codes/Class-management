@@ -1,15 +1,12 @@
 export default function Model() { 
     var list = [];
-
-
     var storageValue = JSON.parse(localStorage.getItem('class'));
 
-    if (storageValue !== null) {
+    if (storageValue !== null) { 
         list = storageValue;
     }
-
-        
-    if (list.length == 0) {
+      
+    if (list.length == 0) { // This condition purpose is to not let the inital value be pushed every time the code run
         var initalValue = {
             code: "321",
             desks: "21",
