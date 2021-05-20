@@ -42,6 +42,7 @@ export default function View() {
             formData[DOMstrings.devices] = document.getElementById(DOMstrings.devices).value.trim();
             formData[DOMstrings.chairs] = document.getElementById(DOMstrings.chairs).value.trim();
             formData[DOMstrings.floor] = document.getElementById(DOMstrings.floor).value.trim();
+
             return formData;
         },
         resetForm: function() {
