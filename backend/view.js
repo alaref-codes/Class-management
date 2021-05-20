@@ -46,12 +46,12 @@ export default function View() {
             return formData;
         },
         resetForm: function() {
-            document.getElementById("code").value = "";  // Use DOMstrings over here
-            document.getElementById("desks").value = "";
-            document.getElementById("projector").value = "";
-            document.getElementById("devices").value = "";
-            document.getElementById("chairs").value = "";
-            document.getElementById("floor").value = "";
+            document.getElementById(DOMstrings.code).value = "";  // Use DOMstrings over here
+            document.getElementById(DOMstrings.desks).value = "";
+            document.getElementById(DOMstrings.projector).value = "";
+            document.getElementById(DOMstrings.devices).value = "";
+            document.getElementById(DOMstrings.chairs).value = "";
+            document.getElementById(DOMstrings.floor).value = "";
         },
         onDelete: function(td) {
             var row = td.target.parentElement.parentElement;
