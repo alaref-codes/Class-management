@@ -25,8 +25,17 @@ export default function Model() {
             localStorage.setItem('class' , JSON.stringify(list))
         },
         deteleItem: function (formData) {
-            var d =  JSON.parse(localStorage.getItem('class'));
-            var ind = d.indexOf(formData)
+            
+            var index = 0;
+
+            for(var i = 0; i < list.length; i++){
+                if (JSON.stringify(formData) === JSON.stringify(list[i])) {
+                    index = i
+                }
+            }
+
+            var ind = list.indexOf(list[index])
+
             list.splice(ind,1)
             localStorage.setItem('class' , JSON.stringify(list))
         },
