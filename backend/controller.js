@@ -27,7 +27,8 @@ export default function Controller(model,view) {
     }
 
     var erase = function (e) {
-        model.deteleItem(e);
+        var deletedData = view.getSelectedData(e);
+        model.deteleItem(deletedData);
         view.erase(e);
     }
 
