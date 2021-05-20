@@ -53,9 +53,20 @@ export default function View() {
             document.getElementById(DOMstrings.chairs).value = "";
             document.getElementById(DOMstrings.floor).value = "";
         },
-        onDelete: function(td) {
+        erase: function(td) {
             var row = td.target.parentElement.parentElement;
             document.getElementById("table").deleteRow(row.rowIndex);
-        }
+        },
+        getSelectedData: function(td) {
+            var selected = td.target.parentElement.parentElement;
+            var  selectedData = {}
+            selectedData[DOMstrings.code] = selected.cells[0].innerHTML;  // Use DOMstrings over here
+            selectedData[DOMstrings.desks] =  selected.cells[1].innerHTML;
+            selectedData[DOMstrings.projector] =  selected.cells[2].innerHTML;
+            selectedData[DOMstrings.devices]=  selected.cells[3].innerHTML;
+            selectedData[DOMstrings.chairs] =  selected.cells[4].innerHTML;
+            selectedData[DOMstrings.floor] =  selected.cells[5].innerHTML;
+            return selectedData;
+        } 
     }   
 };
