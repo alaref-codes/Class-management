@@ -13,6 +13,16 @@ export default function View() {
 
     return {
         addtoList: function (data) {
+            
+//            var cells = {};
+//            for (var elem = 1; elem <= 7; elem++ ){
+//                cells[`cl${elem}`] = newRow.insertCell(elem - 1); 
+//            } 
+//
+//            // changeing the innerHTML to each cell in the object.
+//            for(var i = 1; i <= 7; i++){ // we can repalce <=7 with the object length
+//                cells[`cl${elem}`].innerHTML = data.DOMstrings[i+1];
+//            }
             var table = document.getElementById("table").getElementsByTagName("tbody")[0];
             var newRow = table.insertRow(table.length);
             var cell1 = newRow.insertCell(0);
@@ -34,22 +44,18 @@ export default function View() {
         getDOMstrings: function () {
             return DOMstrings;
         },
-        getInput: function () {      
-            formData[DOMstrings.code] = document.getElementById(DOMstrings.code).value.trim();
-            formData[DOMstrings.desks] = document.getElementById(DOMstrings.desks).value.trim();
-            formData[DOMstrings.projector] = document.getElementById(DOMstrings.projector).value.trim();
-            formData[DOMstrings.devices] = document.getElementById(DOMstrings.devices).value.trim();
-            formData[DOMstrings.chairs] = document.getElementById(DOMstrings.chairs).value.trim();
-            formData[DOMstrings.floor] = document.getElementById(DOMstrings.floor).value.trim();
+        getInput: function () {  
+            for (const element in DOMstrings) {
+                if(element === "btn" || element === "table"){continue} //to skip first two items in DOMStrigs
+                formData[element] = document.getElementById(element).value.trim();
+            }
             return formData;
         },
         resetForm: function() {
-            document.getElementById(DOMstrings.code).value = "";  // Use DOMstrings over here
-            document.getElementById(DOMstrings.desks).value = "";
-            document.getElementById(DOMstrings.projector).value = "";
-            document.getElementById(DOMstrings.devices).value = "";
-            document.getElementById(DOMstrings.chairs).value = "";
-            document.getElementById(DOMstrings.floor).value = "";
+            for (const element in DOMstrings) {
+                if(element === "btn" || element === "table"){continue} //to skip first two items in DOMStrigs
+                else document.getElementById(element).value = "";
+            }
         },
         erase: function(td) {
             var row = td.target.parentElement.parentElement;
