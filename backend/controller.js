@@ -4,7 +4,7 @@ export default function Controller(model,view) {
         document.getElementById(DOM.btn).addEventListener('click', AddItem);
         document.addEventListener('keypress', function (event) {
             if (event.keyCode === 13 || event.which === 13) {
-                AddItem();
+                AddItem();                                                         
             }
         });
         document.addEventListener('click', (e) => {
@@ -42,4 +42,3 @@ export default function Controller(model,view) {
         }
 }
 };
-// End of Controller

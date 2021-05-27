@@ -18,7 +18,6 @@ export default function Model() {
         list.push(initalValue)
     }
 
-
     return {
         addtolist: function (formData) {
             list.push(formData);
@@ -46,7 +45,6 @@ export default function Model() {
             localStorage.setItem('class' , JSON.stringify(list))
       
             return list;
-
         },
     }
 };

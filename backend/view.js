@@ -29,20 +29,18 @@ export default function View() {
             cell6.innerHTML = data.floor;
             var cell7 = newRow.insertCell(6);
             cell7.innerHTML = '<a class="delete">مسح</a>';
-            // this should be fixed
-            // using so much variables
+
         },
         getDOMstrings: function () {
             return DOMstrings;
         },
-        getInput: function () {
+        getInput: function () {      
             formData[DOMstrings.code] = document.getElementById(DOMstrings.code).value.trim();
             formData[DOMstrings.desks] = document.getElementById(DOMstrings.desks).value.trim();
             formData[DOMstrings.projector] = document.getElementById(DOMstrings.projector).value.trim();
             formData[DOMstrings.devices] = document.getElementById(DOMstrings.devices).value.trim();
             formData[DOMstrings.chairs] = document.getElementById(DOMstrings.chairs).value.trim();
             formData[DOMstrings.floor] = document.getElementById(DOMstrings.floor).value.trim();
-
             return formData;
         },
         resetForm: function() {
