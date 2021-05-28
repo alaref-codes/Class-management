@@ -12,6 +12,8 @@ export default function View() {
     var formData = {};
 
     return {
+
+
         addtoList: function (data) {
             var table = document.getElementById("table").getElementsByTagName("tbody")[0];
             var newRow = table.insertRow(table.length);
@@ -27,13 +29,16 @@ export default function View() {
            }
             cells[`cl${i}`].innerHTML = '<a class="delete">مسح</a>';  
         },
+
+
+
         getDOMstrings: function () {
             return DOMstrings;
         },
         getInput: function () {  
             for (const element in DOMstrings) {
                 if(element === "btn" || element === "table"){continue} //to skip first two items in DOMStrigs
-                formData[element] = document.getElementById(element).value.trim();
+                formData[element] = document.getElementById(DOMstrings[element]).value.trim();
             }
             return formData;
         },
@@ -49,13 +54,13 @@ export default function View() {
         },
         getSelectedData: function(td) {
             var selected = td.target.parentElement.parentElement;
-            var  selectedData = {}
-            selectedData[DOMstrings.code] = selected.cells[0].innerHTML; 
-            selectedData[DOMstrings.desks] =  selected.cells[1].innerHTML;
-            selectedData[DOMstrings.projector] =  selected.cells[2].innerHTML;
-            selectedData[DOMstrings.devices]=  selected.cells[3].innerHTML;
-            selectedData[DOMstrings.chairs] =  selected.cells[4].innerHTML;
-            selectedData[DOMstrings.floor] =  selected.cells[5].innerHTML;
+            var  selectedData = {};
+            var i = 0;
+            for (const element in DOMstrings) {
+                if(element === "btn" || element === "table"){continue} //to skip first two items in DOMStrigs
+                selectedData[DOMstrings[element]] = selected.cells[i].innerHTML; 
+                i++;
+            }
             return selectedData;
         } 
     }   
