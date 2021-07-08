@@ -1,0 +1,20 @@
+{
+  "name": "class-management",
+  "version": "1.0.0",
+  "description": "Classes management system, A website for a college project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alaref-codes/Class-management.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alaref-codes/Class-management/issues"
+  },
+  "homepage": "https://github.com/alaref-codes/Class-management#readme"
+}
